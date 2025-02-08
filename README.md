@@ -1,16 +1,15 @@
-## Hi there 👋
+Inklink Prints 🌟 | Official Website Development
+This repository houses the official website for Inklink Prints, a premier digital printing agency specializing in design, print, signage, and custom gifting.
 
-<!--
-**Inklinkprints/Inklinkprints** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🛠️ Project Overview
+Purpose: Build a modern, responsive, and visually appealing website
+Tech Stack: HTML, CSS, JavaScript, React...
+Features:
+✅ Showcase our services (Print, Signage, Design, Gifting)
+✅ Portfolio of completed projects
+✅ Contact & inquiry forms
+✅ Blog & updates
+🚀 Stay Tuned!
+This project is a work in progress—follow along for updates!
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+📩 For inquiries, visit: www.inklinkprints.com
