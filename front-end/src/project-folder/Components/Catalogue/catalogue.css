@@ -1,0 +1,24 @@
+.catalogue-btn {
+    position: fixed;
+    left: -5.9rem;
+    bottom: 15rem;
+    z-index: 20;
+    text-decoration: none;
+    background: linear-gradient(45deg, #0078d4, #d2042d);
+    color: white;
+    padding: 0.6em 2em;
+    transform: rotate(-90deg);
+    border-radius: 0 0 1em 1em;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+
+  @media (max-width: 768px) {
+    .catalogue-btn {
+      left: -6.8rem;
+      padding: 0.7em 2em;
+      font-size: 1.1rem;
+    }
+  }
+

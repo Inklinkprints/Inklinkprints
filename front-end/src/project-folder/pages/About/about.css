@@ -1,0 +1,155 @@
+.about {
+  margin: 0 auto;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.about-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: rgb(32, 57, 139);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-text1 {
+  font-size: 1.1em;
+  font-weight: 550;
+  margin: 0.3em auto;
+  width: 85%;
+  color: #333;
+}
+
+.about-text2 {
+  margin: 1em auto 3em;
+  font-size: 1em;
+  max-width: 85%;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-vm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  padding: 0 4em;
+  margin: 0 auto;
+}
+
+.about-vision,
+.about-mission {
+  border-radius: 1em;
+  padding: 2em 1em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-vision:hover,
+.about-mission:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-vision {
+  background: linear-gradient(135deg, #545454, #707070);
+}
+
+.about-mission {
+  background: linear-gradient(135deg, #c7a376, #e0bc92);
+}
+
+.about-icon {
+  font-size: 3em;
+  color: #fff;
+  width: 1em;
+  margin: auto;
+}
+
+.about-subtitle-vm {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.about-desc-vm {
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.about-subtitle-mission {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #303030;
+}
+
+.about-desc-mission {
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .about-title {
+    font-size: 1.2em;/* Slightly larger for better readability */
+  }
+
+  .about-text1 {
+    font-size: 1.2em; /* Increased from 1em */
+  }
+
+  .about-text2 {
+    font-size: 1.1em; /* Increased from 0.9em */
+  }
+
+  .about-subtitle-vm,
+  .about-subtitle-mission {
+    font-size: 1.2em; /* Slightly larger */
+  }
+
+  .about-desc-vm,
+  .about-desc-mission {
+    font-size: 1em; /* Increased for readability */
+  }
+}
+
+@media (max-width: 788px) {
+  .about-vm {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    font-size: 1.2em; /* Larger font size for smaller screens */
+  }
+
+  .about-text1 {
+    font-size: 1.1em; /* Slightly larger */
+  }
+
+  .about-text2 {
+    font-size: 1em; /* Improved readability */
+  }
+
+  .about-subtitle-vm,
+  .about-subtitle-mission {
+    font-size: 1.1em;
+  }
+
+  .about-desc-vm,
+  .about-desc-mission {
+    font-size: 1em;
+  }
+}
+
+

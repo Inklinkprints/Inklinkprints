@@ -1,0 +1,232 @@
+/* General Styling */
+.footer {
+  background-color: rgb(42, 46, 57);
+  color: #fefefe;
+  font-family: 'Lato', sans-serif;
+  height: auto;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 0em 0em;
+  justify-content: space-between;
+  
+}
+
+.links-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  
+}
+
+.footer-section {
+  flex: 1;
+  padding: 1em 1.7em;
+  min-width: 250px;
+
+}
+
+.footer-section h2 {
+  font-size: clamp(1em, 2vw, 1em); /* Responsive font size */
+  margin-bottom: 1em;
+  color: #fefefe;
+}
+
+.footer-section h3 {
+  font-size: clamp(0.9em, 1.8vw, 1em); /* Responsive font size */
+  margin-bottom: 1em;
+  color: #fefefe;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5em;
+}
+
+.footer-column a {
+  font-size: clamp(0.8em, 1.6vw, 0.8em); /* Responsive font size */
+  color: #fefefe;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #f76c6c;
+}
+
+.footer-map {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+.footer-social a {
+  margin-right: 0.5em;
+  font-size: clamp(0.9em, 2vw, 1em); /* Responsive font size */
+  color: #fefefe;
+}
+
+.footer-social a:hover {
+  color: #f76c6c;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 0.1em;
+  background-color: rgb(31, 33, 43);
+  font-size: clamp(0.6em, 1.2vw, 0.7em); /* Responsive font size */
+}
+
+.footer-address {
+  font-size: clamp(0.7em, 1.4vw, 0.8em); /* Responsive font size */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.footer-phone a {
+  font-size: clamp(0.7em, 1.4vw, 0.8em); /* Responsive font size */
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-email a {
+  font-size: clamp(0.7em, 1.4vw, 0.8em); /* Responsive font size */
+  color: #fff;
+  margin-left: 0.5em;
+  text-decoration: none;
+}
+
+/* Responsive Styling */
+/* Responsive Updates for Footer Styling */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1em 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+  }
+
+  .footer-section {
+    padding: 1em;
+    min-width: 100%; /* Ensure full width on smaller screens */
+    text-align: center; /* Center-align for a cleaner layout */
+  }
+
+  .footer-section h2 {
+    font-size: 1.2em; /* Slightly larger for readability */
+  }
+
+  .footer-section h3 {
+    font-size: 1em; /* Ensure clarity */
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+    max-width: 120px; /* Scale down for smaller screens */
+  }
+
+  .footer-map {
+    height: 150px;
+    border-radius: 5px; /* Slightly less pronounced rounding */
+  }
+
+  .footer-column ul {
+    padding: 0;
+    text-align: center; /* Center-align the lists */
+  }
+
+  .footer-column li {
+    margin-bottom: 0.8em; /* Increase spacing for better visibility */
+  }
+
+  .footer-column a {
+    font-size: 0.9em; /* Larger text for links */
+  }
+
+  .footer-social a {
+    font-size: 1em; /* Maintain adequate icon size */
+    margin: 0.5em; /* Add consistent spacing */
+  }
+
+  .footer-bottom {
+    font-size: 0.9em; /* Improve readability */
+    padding: 0.5em 0;
+  }
+
+  .footer-address,
+  .footer-phone a,
+  .footer-email a {
+    font-size: 0.9em; /* Uniform size for contact details */
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 1em;
+    gap: 1em; /* Reduce spacing for very small screens */
+  }
+
+  .footer-section h2 {
+    font-size: 1.3em; /* Keep section headers readable */
+  }
+
+  .footer-section h3 {
+    font-size: 1.2em; /* Adjust subheadings */
+  }
+
+  .footer-logo {
+    max-width: 100px; /* Scale down further */
+  }
+
+  .footer-map {
+    height: 120px; /* Compact map size */
+  }
+
+  .footer-column a {
+    font-size: 1.1em; /* Slightly reduce text size for links */
+  }
+
+  .footer-column h2 {
+    font-size: 1.2em; /* Slightly reduce text size for links */
+  }
+
+  .footer-social a {
+    font-size: 1.1em; /* Ensure icons remain clickable */
+  }
+
+  .footer-bottom {
+    font-size: 0.8em; /* Compact bottom text */
+  }
+
+  .footer-address,
+  .footer-phone a,
+  .footer-email a {
+    font-size: 1.1em; /* Compact contact details */
+  }
+  .footer-social a{
+    font-size: 1.6em;
+  }
+}
+

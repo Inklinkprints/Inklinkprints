@@ -1,0 +1,117 @@
+/* Navbar styles */
+.navbarbtn {
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  right: 8%;
+  width: 55%;
+  max-width: 340px;
+  z-index: 3000;
+  text-align: left;
+  border: 1px solid #34495e;
+  overflow-y: auto; /* Enable scrolling when content overflows */
+  max-height: 300px; /* Limit height for scrollable area */
+  border-radius: 10px 0 10px 10px;
+  background-color: #2c3e50;
+}
+
+/* Navbar UL styles */
+.navbarbtn-ul {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  list-style: none; /* Remove bullets */
+}
+
+/* Navbar LI styles */
+.navbarbtn-ul > li {
+  position: relative; /* For positioning dropdown menus */
+  padding: 10px 0;
+  border-bottom: 1px solid #34495e;
+  font-weight: 600;
+  list-style: none; /* Ensure no bullets */
+}
+
+.navbarbtn-ul > li:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+/* Link styles */
+.navbarbtn-ul a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbarbtn-ul a:hover {
+ /* Dark background on hover */
+  color: #f1c40f; /* Yellow text on hover */
+}
+
+/* Submenu styles */
+.navbarbtn-ul ul {
+  position: relative;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+
+  border-radius: 0 0 10px 10px;
+  overflow: auto; /* Initially hidden */
+  z-index: 2000;
+}
+
+.navbarbtn-ul li:hover > ul {
+  display: block;
+ /* Show dropdown on hover */
+}
+
+.navbarbtn-ul ul li {
+  position: relative;
+  left: -1em;
+  padding: 10px;
+  border-bottom: 1px solid #34495e;
+  list-style: none; /* Remove bullets */
+}
+
+.navbarbtn-ul ul li:last-child {
+  border-bottom: none;
+}
+
+/* Down arrow icon */
+.down-arrow {
+  margin-left: 8px;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbarbtn {
+      width: 80%;
+      right: 10%;
+  }
+
+  .navbarbtn-ul a {
+      font-size: 1rem;
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarbtn {
+      width: 90%;
+      right: 5%;
+  }
+
+  .navbarbtn-ul a {
+      font-size: 1rem;
+      padding: 6px;
+  }
+}

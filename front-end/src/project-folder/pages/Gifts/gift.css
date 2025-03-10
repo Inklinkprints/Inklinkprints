@@ -1,0 +1,280 @@
+/* Global Gift Styles */
+.gift-content {
+  padding: 1em 2em;
+  width: auto;
+  margin: auto;
+  background-color: #fefefe;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+.gift-title {
+  font-size: clamp(1.3em, 3vw, 1.7em);
+  font-weight: 700;
+  color: #004080;
+  text-align: left;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 0.5em;
+}
+
+/* Introductory Description */
+.gift-intro {
+  text-align: justify;
+  color: #555;
+  line-height: 1.8;
+}
+
+.gift-description {
+  font-size: clamp(1.15em, 1.5vw, 1em);
+  margin-bottom: 2em;
+}
+
+/* Gift Services Section */
+.gift-services {
+  margin: 4em 0;
+}
+
+.gift-services h2 {
+  font-size: clamp(1.2em, 2.5vw, 1.5em);
+  color: #004080;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+/* Flexbox Section for Why Choose Us */
+.gift-flexbox {
+  display: grid;
+  gap: 2rem;
+}
+
+.gift-flex {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr; /* Image and Text in 2 columns */
+  gap: 2rem;
+  align-items: center; /* Ensures items align properly in the center vertically */
+}
+
+.gift-flex.reverse {
+  grid-template-columns: 0.8fr 1fr;
+  direction: rtl; /* Reverses the entire grid direction for the reverse layout */
+}
+
+.gift-flex.reverse > * {
+  direction: ltr; /* Corrects the text alignment and image positioning for reverse layout */
+}
+
+/* Container for the gift image */
+.gift-img-container {
+  display: flex;
+  justify-content: flex-start; /* Aligns the image to the left */
+  align-items: center; /* Vertically centers the image */
+  max-width: 100%;
+  height: auto; /* Set the fixed box height */
+  overflow: hidden; /* Prevents the image from overflowing */
+  border-radius: 12px;
+  border: 4px solid #ddd;
+  position: relative; /* Allows absolute positioning of the image */
+}
+
+.gift-img-container.reverse {
+  justify-content: flex-end; /* Aligns the image to the right when reversed */
+}
+
+.gift-img {
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  width: 100%;
+  height: 100%;
+  object-position: center; /* Ensures the image is centered inside the box */
+}
+
+.gift-flexhead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.gift-flexhead h2 {
+  font-size: clamp(1.3em, 2.5vw, 1.5em);
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.gift-flexhead p {
+  font-size: clamp(1.15em, 1.5vw, 1em);
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Services Section */
+.our-services {
+  margin: 4em 0;
+}
+
+.services-heading {
+  font-size: clamp(1.2em, 2.5vw, 1.5em);
+  color: #004080;
+  text-align: left;
+  margin-bottom: 2em;
+}
+.our-services-heading{
+  font-size: clamp(1.3em, 2.5vw, 1.5em);
+    color: #004080;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.service-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box h3 {
+  font-size: clamp(1.15em, 1.5vw, 1em);
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.service-box p {
+  font-size: clamp(1.15em, 1.5vw, 1em);
+  color: #555;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: #004080;
+}
+
+/* How We Work Section */
+.how-we-work {
+  margin: 4em 0;
+}
+
+.how-we-work h2 {
+  font-size: clamp(1.2em, 2.5vw, 1.5em);
+  color: #004080;
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
+.how-we-work-para {
+  font-size: clamp(1.15em, 1.5vw, 1em);
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.how-we-work-bullets {
+  margin-top: 1em;
+  padding-left: 1.5em;
+}
+
+.how-we-work-bullets li {
+  font-size: clamp(1em, 1.5vw, 1em);
+  margin-bottom: 0.5em;
+  list-style-type: square;
+}
+
+/* Explore Products Section */
+.gift-subcontent-box {
+  margin: 4em 0;
+  text-align: center;
+}
+
+.gift-subcontent-box h3 {
+  font-size: clamp(1.2em, 2.5vw, 1.5em);
+  color: #004080;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.gift-subcontent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+}
+
+.gift-grid-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1em;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gift-grid-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gift-fleximg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.gift-grid-box p {
+  font-size: clamp(1.15em, 1.5vw, 1em);
+  color: #004080;
+  font-weight: 600;
+  margin: 0;
+}
+
+.gift-grid-box p:hover {
+  color: #f76c6c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .gift-flexbox {
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
+
+  .gift-flex {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: 1em;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+  }
+
+  .gift-flex.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-img {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gift-content {
+    padding: 1rem;
+  }
+
+ 
+}

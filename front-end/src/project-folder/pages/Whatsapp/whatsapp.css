@@ -1,0 +1,248 @@
+/* General container */
+.whatsapp-container {
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Floating Chat Widget container */
+.WA_Chat_Widget {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 1000;
+}
+
+/* Chatbox styling */
+.WA_ChatBox {
+  width: 100%; /* Adjust width relative to screen */
+  max-width: 320px; /* Maintain maximum width */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: none;
+  flex-direction: column;
+}
+
+/* Chatbox Header */
+.WA_ChatBox_Header {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #25d366;
+  color: #fff;
+  height: 4em;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar box */
+.avatarBox {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.avatarBox img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Info box */
+.infoBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 0.5em;
+}
+
+/* Name */
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Answer time */
+.answer_time {
+  font-size: 0.8rem;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Close button */
+.WA_Close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.WA_Close svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Chatbox Body */
+.WA_ChatBox_Body {
+  padding: 0.8em;
+  overflow-y: auto;
+  max-height: 120px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+}
+
+.WA_ChatBox_Body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.WA_ChatBox_Body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.WA_ChatBox_Body::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Message */
+.message {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.message .username {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5em;
+  color: #555;
+}
+
+.message_content p {
+  font-size: 0.9rem;
+  color: #222;
+  background: #f1f1f5;
+  padding: 0.8em 1rem;
+  border-radius: 16px;
+  display: inline-block;
+  max-width: 75%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
+
+.message_content p.sent {
+  background: #dcf8c6;
+  align-self: flex-end;
+}
+
+/* Chatbox Footer */
+.WA_ChatBox_Footer {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+.WA_ChatBox_Footer input[type="text"] {
+  flex: 1;
+  padding: 0.8em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  margin-right: 0.8em;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.WA_ChatBox_Footer .btn-whatsapp {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #25d366;
+  padding: 0.8em 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.WA_ChatBox_Footer .btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* Floating Button */
+.WA_FloatingButton {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #4fce5d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.WA_FloatingButton:hover {
+  transform: scale(1.1);
+}
+
+.WA_FloatingButton svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #ffffff;
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.WA_FloatingButton {
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* Responsive Font Sizes */
+html {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+      font-size: 14px;
+  }
+}

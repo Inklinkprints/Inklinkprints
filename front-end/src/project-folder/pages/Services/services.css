@@ -1,0 +1,244 @@
+.services-main {
+  margin: 2em auto;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.services-header {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: rgb(32, 57, 139);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services-desc-main {
+  font-size: 1.1em;
+  font-weight: 550;
+  text-align: center;
+  width: 85%;
+  margin: 0.3em auto;
+}
+
+.services-desc-secondary {
+  font-size: 1em;
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  width: 85%;
+  margin: 1em auto 3em;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  gap: 1em;
+  width: 90%;
+  margin: auto;
+  padding: 1em;
+}
+
+.services-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.6em 0.8em;
+  margin: auto;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.services-card-head {
+  margin: 1em 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.services-card-btn {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  width: 80%;
+  height: 2.6em;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.services-card-btn:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+.services-card-btn:active {
+  transform: translateY(1px);
+}
+
+.services-card-logo {
+  width: 3.3em;
+  height: 3.3em;
+  margin: auto;
+}
+
+.gift-logo {
+  font-size: 2.8em;
+  background: linear-gradient(-220deg, #f3dec7, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-card-title {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--color1);
+  margin: 0.6em auto;
+}
+
+.services-card-desc {
+  font-size: 0.8em;
+  color: var(--color1);
+  line-height: 1.4;
+  padding: 1em 0;
+}
+
+.hidden {
+  opacity: 1;
+}
+
+.show {
+  animation: services-cards 1.2s;
+  opacity: 1;
+  position: relative;
+}
+
+@keyframes services-cards {
+  0% {
+    opacity: 0;
+    top: 3.125em;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .services-header {
+    font-size: 1.2em;
+  }
+
+  .services-desc-main {
+    font-size: 1.2em;
+  }
+
+  .services-desc-secondary {
+    font-size: 1.1em;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  }
+
+  .services-card-title {
+    font-size: 1.1em;
+  }
+
+  .services-card-desc {
+    font-size: 0.9em;
+  }
+
+  .services-card-btn {
+    width: 85%;
+  }
+}
+
+@media (max-width: 788px) {
+  .services-header {
+    font-size: 1.2em;
+  }
+
+  .services-desc-main {
+    font-size: 1em;
+  }
+
+  .services-desc-secondary {
+    font-size: 0.9em;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+  }
+
+  .services-card-title {
+    font-size: 1.05em;
+  }
+
+  .services-card-desc {
+    font-size: 0.9em;
+  }
+
+  .services-card-btn {
+    width: 80%;
+  }
+
+  .services-card-logo {
+    width: 3.5em;
+    height: 3.5em;
+  }
+}
+
+@media (max-width: 608px) {
+  .services-header {
+    font-size: 1.2em;
+  }
+
+  .services-desc-main {
+    font-size: 1.1em;
+  }
+
+  .services-desc-secondary {
+    font-size: 1em;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+  }
+
+  .services-card-title {
+    font-size: 1.1em;
+  }
+
+  .services-card-desc {
+    font-size: 1em;
+  }
+
+  .services-card-btn {
+    width: 80%;
+  }
+
+  .services-card-logo {
+    width: 3.5em;
+    height: 3.5em;
+  }
+}

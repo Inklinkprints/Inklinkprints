@@ -1,0 +1,173 @@
+/* General Styling */
+.terms-container {
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #444;
+    line-height: 1.7;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Elements */
+.terms-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00c3ff);
+}
+
+/* Heading Styles */
+.terms-container h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+    margin: 2rem 0 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.terms-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #00c3ff);
+    border-radius: 2px;
+}
+
+.terms-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 2.5rem 0 1.5rem;
+    padding: 0.8rem 0;
+    border-bottom: 2px solid #f0f4f9;
+    position: relative;
+}
+
+.terms-container h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin: 2rem 0 1rem;
+}
+
+/* Paragraph Styling */
+.terms-container p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* List Styling */
+.terms-container ul {
+    padding-left: 1.8rem;
+    margin: 1.5rem 0;
+    list-style-type: none;
+}
+
+.terms-container li {
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.terms-container li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: 700;
+}
+
+/* Links */
+.terms-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 123, 255, 0.2);
+}
+
+.terms-container a:hover {
+    color: #0056b3;
+    border-bottom-color: #007bff;
+}
+
+/* Highlight Sections */
+.terms-container .highlight {
+    background: #f8f9ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    margin: 2rem 0;
+}
+
+/* Contact Info Styling */
+.terms-container .tc-contact-info {
+    margin: 3rem 0 1rem;
+    padding: 2rem;
+    background: #f8f9ff;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid #e3e9ff;
+}
+
+.terms-container .tc-contact-info::before {
+    content: '📧';
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    font-size: 1.5rem;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 2rem;
+        margin: auto;
+        border-radius: 12px;
+    }
+
+    .terms-container h1 {
+        font-size: 2rem;
+        margin: 1.5rem 0 2rem;
+    }
+
+    .terms-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .terms-container .contact-info::before {
+        left: -15px;
+        top: -15px;
+    }
+}
+
+/* Smooth Scrolling */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

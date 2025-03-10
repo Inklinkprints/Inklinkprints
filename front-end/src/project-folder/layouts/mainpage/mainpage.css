@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 70px; /* Adjust based on your navbar height */
+  scroll-behavior: smooth; /* For smooth scrolling effect */
+}
+

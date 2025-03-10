@@ -1,0 +1,148 @@
+.products {
+  border-radius: 30px;
+  color: black;
+  margin: 0em auto;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+ 
+}
+
+.products_title {
+  max-width: 80%;
+  min-height: 3em;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: rgb(32, 57, 139);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.products_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1em;
+
+}
+
+
+.products_img {
+  height: 13em;
+  width: 17em;
+  max-width: 300px;
+  border-radius: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products_img:hover {
+
+  transition: all 0.3s;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.products_subtitle {
+  margin-top: 0.7em;
+  font-size: 1em;
+  font-weight: 600;
+  color: #333;
+}
+
+.products_desc {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  line-height: 1.5;
+  color: #555;
+}
+
+@media (max-width: 992px) {
+  .products {
+    padding: 1.5em;
+  }
+
+  .products_title {
+    font-size: 1.2em;
+  }
+
+  .products_grid {
+    gap: 1.5em;
+  }
+
+  .products_subtitle {
+    font-size: 1em;
+  }
+
+  .products_desc {
+    font-size: 0.9em;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    padding: 1em 0.5em;
+  }
+
+  .products_title {
+    font-size: 1.2em;
+  }
+
+  .products_grid {
+    gap: 1.5em;
+    
+  }
+
+  .products_img {
+    height: 14em;
+    width: 19.5em;
+   
+  }
+
+  .products_subtitle {
+    font-size: 0.9em;
+  }
+
+  .products_desc {
+    font-size: 0.8em;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    padding: 1em;
+  }
+  
+  .products_title {
+    font-size: 1.2em;
+  }
+
+  .products_subtitle {
+    font-size: 1.1em;
+  }
+
+  .products_desc {
+    font-size: 1em;
+    width: 90%;
+  }
+}

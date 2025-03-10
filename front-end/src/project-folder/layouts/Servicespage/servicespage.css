@@ -1,0 +1,141 @@
+.servicessubpage-page {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Navbar, Container, Footer */
+  grid-template-columns: 1fr; /* Single column for container */
+  grid-template-areas:
+    "navbar"
+    "container"
+    "footer";
+  height: auto; /* Full viewport height */
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+.servicessubpage-container {
+  grid-area: container;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Sidebar and Content */
+  grid-template-areas: "sidebar content";
+  height: calc(100vh); /* Remaining height after navbar and footer */
+
+}
+
+.servicessubpage-navbar {
+  grid-area: navbar;
+  height: 60px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+}
+
+.servicessubpage-sidebar {
+  grid-area: sidebar;
+  background-color: #e6e6e6;
+  overflow-y: auto; /* Allow vertical scrolling */
+  width: auto; /* Sidebar width */
+  transition: all 0.3s ease;
+}
+
+.servicessubpage-sidebar.collapsed {
+  width: 0; /* Hide sidebar */
+  display: none; /* Remove from view */
+}
+
+.servicessubpage-content {
+  grid-area: content;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  max-width: 100%; /* Prevent the content from exceeding its container */
+  overflow-x: hidden;
+}
+
+.servicessubpage-footer {
+  grid-area: footer;
+  height: auto;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: inherit;
+  width: 100%; /* Ensure footer spans the full width */
+  max-width: 100%; /* Prevent it from overflowing */
+  overflow: hidden; /* Hide any unexpected overflow */
+}
+
+/* Responsive Design for Screens <= 768px */
+@media (max-width: 768px) {
+  .servicessubpage-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-areas: "content"; /* Only show content */
+  }
+
+  .servicessubpage-sidebar {
+    display: none; /* Hide sidebar */
+  }
+
+  .servicessubpage-content {
+    width: 100%; /* Full width */
+    padding: 1rem;
+    height: calc(100vh - 60px - 40px); /* Adjust height for navbar and footer */
+  }
+}
+
+/* Screens Below 900px */
+@media (max-width: 900px) {
+  .servicessubpage-navbar {
+    height: 50px; /* Reduce navbar height */
+  }
+
+  .servicessubpage-container {
+    grid-template-columns: 1fr; /* Hide sidebar */
+    grid-template-areas: "content"; /* Only content */
+    height: calc(100vh - 50px - 40px); /* Adjust height for navbar and footer */
+  }
+
+  .servicessubpage-content {
+    /* Adjust padding */
+  }
+}
+
+/* Screens Below 768px */
+@media (max-width: 768px) {
+  .servicessubpage-navbar {
+  }
+
+  .servicessubpage-container {
+    grid-template-columns: 1fr;
+    height: calc(100vh - 50px - 40px);
+  }
+
+  .servicessubpage-content {
+  }
+}
+
+/* Screens Below 480px */
+@media (max-width: 480px) {
+  .servicessubpage-navbar {
+    font-size: 0.9em;
+  }
+
+
+}
+
+/* Screens Below 400px */
+@media (max-width: 400px) {
+  .servicessubpage-navbar {
+    height: 40px; /* Further reduce navbar height */
+  }
+
+  .servicessubpage-content {
+    font-size: 0.85em; /* Smaller font for compact screens */
+  }
+
+  .servicessubpage-footer {
+    height: auto; /* Allow footer to expand */
+    font-size: 0.85em;
+  }
+}
